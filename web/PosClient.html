@@ -1,0 +1,27 @@
+<html><head>
+
+<script>
+    function startApp() {
+        dtjava.embed(
+            {
+                url : './Pos/PosClient.jnlp',
+                placeholder : 'Pos',
+                width : 1280,
+                height : 800
+            },
+            {
+                javafx : '2.2+'
+            },
+            {}
+        );
+    }
+	
+    $(function(){
+        $("#animateArea").css("width", "1280px");
+    });
+    dtjava.addOnloadCallback(startApp);
+</script>
+
+</head><body>
+    <div id="Pos" style="margin-top: 20px"></div>
+</body></html>

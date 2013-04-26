@@ -1,0 +1,38 @@
+/* 
+    Document   : slideMenu
+    Created on : 3-Feb-2013, 10:22:54 AM
+    Author     : Wilson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#slideMenu {
+    text-align: left;
+    float: right;
+    list-style: none;
+    margin-right: 10px;
+}
+
+#slideMenu li {
+    cursor: pointer;
+    right: 0;
+    margin-top: 13px;
+    height:30px;    
+}
+
+#slideMenu .trigger {
+    display: inline-block;
+    width:30px;
+    height:30px;
+    background: url(../images/slideMenu/arrow.png) top no-repeat;
+}
+
+#slideMenu a {
+    position: absolute;
+    display: inline-block;
+    right: -180px;
+    padding-top: 4px;
+    height: 25px;
+    text-decoration: none;
+    color: white;
+}

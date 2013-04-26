@@ -1,0 +1,8 @@
+siCommerce is a eCommerce webserver written in JSP with the ability to query the database for product information and return it to both the web page and the PosClient.
+
+The DBUtil class inherits an interface that is also incluced in the PosClient to allow remote method invocation.
+
+The reason of using JSP as the server-side scripting language is that the Hessian Binary Protocal is accepting HTTP requests as a servlet, therefore JSP is the best choice
+ in this circumstance.
+
+ 

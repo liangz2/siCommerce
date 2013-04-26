@@ -1,0 +1,476 @@
+a { 
+    cursor: pointer;
+    text-decoration: none;
+    color: #3aa0ff;
+    border-bottom: dotted 1px #AAA
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 98%;
+    font-family: Trebuchet MS;
+    background: url(../images/siteStyle/gridBg.jpg) repeat top;
+    background-attachment: fixed;
+}
+
+#wrapper {
+    margin-top: 10px;
+    min-height: 100%;
+    position: relative;
+}
+
+#sideBar {
+    position: fixed;
+    top: 30%;
+    list-style: none;
+    padding: 0 0 0 25px;
+    border: 1px solid transparent;
+    
+}
+
+#trigger {
+    position: fixed;
+    top: 30%;
+    width: 13px;
+    height: 190px;
+    z-index: 6;
+    border: 1px transparent;
+}
+
+#sideBar h3 {
+    position: relative;
+    height: 25px;
+}
+
+#sideBar h3:first-child {
+    margin-top: 0;
+}
+
+#sideBar h3:last-child {
+    margin-bottom: 0;
+}
+
+#sideBar h3:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #6cc0ff;
+    top: 50%;
+    margin-top: -8px;
+    left: -23px;
+}
+
+#sideBar h3:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #3aa0ff;
+    top: 50%;
+    margin-top: -12px;
+    left: -23px;
+}
+
+#sideBar a {
+    position: relative;
+    padding: 5px;
+    box-shadow: inset 0 25px 10px -10px rgba(255, 255, 255, 0.2);
+    background: #c5f0ff; 
+    -webkit-transition: padding, font-size, 0.1s linear;
+    -moz-transition: padding, font-size, 0.1s linear;
+    -ms-transition: padding, font-size, 0.1s linear;
+    -o-transition: padding, font-size, 0.1s linear;
+}
+
+
+#sideBar a:before,
+#sideBar a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+}
+
+#sideBar a:before {
+    content: "";
+}
+
+#sideBar a:after {
+    float: right;
+}
+
+#sideBar li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+#sideBar a {
+    border-bottom: none;
+}
+
+#sideBar a.selected {
+    padding-left: 18px;
+    padding-right: 10px;
+    background: #3aa0ff;
+    color: white;
+}
+#sideBar a.nonselected {
+    font-size: 14px;
+}
+#sideBar a.nonselected:after {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #c5f0ff;
+    margin-top: -5px;
+}
+
+#sideBar a.selected:after {
+    margin-left: 0;
+    position: relative;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #3aa0ff;
+    margin-top: -8px;
+}
+
+#sideBar a:hover {
+    padding-left: 18px;
+    background: #a2d6eb;
+}
+
+#sideBar a:hover:after {
+    border-left-color: #a2d6eb;
+}
+
+#header {
+    position: relative;
+    display: block;
+    width: 1124px;
+    height: 350px;
+    /*background: url(../images/siteStyle/headerBg_small.png) repeat top;*/
+    border-left: solid 3px #3aa0ff;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+#siteIntro {
+    position: relative; 
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+#topBar {
+    font-size: 13px;
+    color: #d3e2f4;
+    background: url(../images/siteStyle/topBar.jpg) repeat-x top;
+}
+
+#topBar a {
+    color: #6cc0ff;
+}
+
+#log {
+    float: right;
+    padding-top: 3px;
+    height: 21px;
+    margin-right: 10px
+}
+
+#login {
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    padding: 20px 20px 30px 20px;
+    right: 0;
+    top: 35px;
+    font-weight: 600;
+    background: rgba(58, 160, 255, 0.7);
+    box-shadow: inset 0 25px 10px -10px rgba(255, 255, 255, 0.2);
+}
+
+/* upward arrow */
+#login:before {
+    content: "";
+    position: absolute;
+    border-bottom: 8px solid rgba(58, 160, 255, 0.7);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent;
+    top: -16px;
+    right: 80px;
+}
+
+#loginLink:hover {
+    cursor: pointer;
+}
+
+#loginForm td:not(:last-child) {
+    padding-right: 10px;
+}
+
+#loginForm input[type=text],
+#loginForm input[type=password]{
+    width: 120px;
+    border-radius: 5px;
+    box-shadow: inset 0 25px 10px -10px rgba(150, 150, 150, 0.3);
+    border: 1px solid #AAA;
+}
+
+#loginButton {
+    position: absolute; 
+    right: 20px; 
+    width: 50px; 
+    color: #777;
+    border-radius: 5px;
+    box-shadow: inset 0 25px 10px -10px rgba(255, 255, 255, 0.5);
+    border: 1px solid #aaa;
+}
+
+#loginButton:hover {
+    box-shadow: inset 0 25px 10px -10px rgba(150, 150, 150, 0.2);
+}
+
+.cart {
+    float: right;
+    margin-right: 20px;
+}
+
+#content { 
+    position: relative;
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+#animateArea {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 1024px;
+    padding-bottom: 100px;
+}
+
+#logoLink { 
+    float: left;
+    border-bottom: none;
+    left: 50px;
+    cursor: pointer;
+    position: relative; 
+    display: block; 
+    height: 30px;
+    width: 204px;
+    background: url(../images/siteStyle/logo.png) top;
+}
+
+#logoLink:hover {
+    background: url(../images/siteStyle/logo_grey.png) top
+}
+
+#footBar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: #3aa0ff;
+    font-size: 13px;
+}
+
+#message {
+    position: relative;
+    text-align: center;
+    
+}
+/* 
+
+    Document   : index_style
+    Created on : Jun 11, 2012, 5:25:08 PM
+    Author     : Zhengyi
+    Description:
+        Purpose of the stylesheet follows.
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: verdana;
+    background: url(../images/siteStyle/contentBg.png) repeat top;
+}
+
+.clear {
+    clear:both;
+}
+
+
+
+#wrapper {
+    overflow: hidden;
+    width: 1024px;
+    margin: 0 auto 40px;
+    height: 100%;
+    position: relative;
+}
+
+#topBar {
+    font-size: 12px;
+    color: #d3e2f4;
+    padding-top: 1px;
+    background: url(../images/siteStyle/topBar.jpg) repeat-x top;
+}
+
+#topBar a {
+    color: #6cc0ff;
+}
+
+#topBar a:hover {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#log {
+    padding-top: 3px;
+    margin: 0 auto;
+    width: 1024px;
+    height: 21px;
+}
+
+.cart {
+    float: right;
+    margin-right: 20px;
+}
+
+#menu {
+    position: relative;
+    margin: 0 auto;
+    height: 25px;
+    background: url(../images/siteStyle/menuBar.jpg) repeat-x top;
+    border-top: solid #AAA 1px;
+    border-bottom: solid #AAA 1px;
+}
+
+#menu li {
+    float: left;
+    margin-top: 3px;
+    list-style: none outside none;
+    border-right: solid #AAA 1px;
+}
+
+#menu a {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 110px;
+    height: 19px;
+}
+
+#menu .pos {
+    color: red;
+}
+
+#menu a:hover {
+    font-weight: bold;
+    color: #064878;
+    height: 20px;
+    background: url(../images/siteStyle/menuBG.png) no-repeat top;
+}
+
+#menu .chosen {
+    font-weight: bold;
+    color: #064878;
+    height: 20px;
+    background: url(../images/siteStyle/menuBG.png) no-repeat top;
+}
+
+#menu .small {
+    font-size: 11px;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: url(../images/siteStyle/headerBg.png) repeat-x top;
+}
+
+#address {
+    float: right;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+.address-item {
+    vertical-align: top;
+}
+
+.address-item-small {
+    font-size: 11px;
+}
+
+.address-item-title {
+    font-weight: bold;
+}
+
+#content { 
+    position: relative;
+    padding-bottom: 100px;
+}
+
+#pin {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#logoLink { 
+    float: left;
+    cursor: pointer;
+    position: relative; 
+    display: block; 
+    height: 36px;
+    width: 311px;
+    top: 50px;
+    background: url(../images/siteStyle/logo.png) top;
+}
+
+#logoLink:hover {
+    background-position-y: 36px;
+}
+
+#footBar {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    color: #6cc0ff;
+    font-size: 13px;
+    background: url(../images/siteStyle/topBar.jpg);
+}
+
+#footBar a {
+    text-decoration: none;
+    color: #6cc0ff;
+    border-bottom: dotted 1px #AAA
+}
+
+#message {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 50px;
+    float: right;
+}*/
